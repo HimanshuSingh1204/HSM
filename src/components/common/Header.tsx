@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, LogOut, Settings } from 'lucide-react';
+import { Menu, X, LogOut, Settings, User } from 'lucide-react';
 import { useAuthStore } from '../../store/authStore';
 import { Avatar } from '../ui/Avatar';
 import { menuItems } from '../../utils/helpers';
@@ -17,6 +17,15 @@ export function Header() {
     navigate('/login');
   };
 
+  const handleProfileClick = () => {
+    if (user?.role === 'member') {
+      navigate('/member/profile');
+    } else {
+      navigate(`/${user?.role}/settings`);
+    }
+    setIsMenuOpen(false);
+  };
+
   const currentPage = menuItems.find((item) => item.path === location.pathname)?.label || 'Dashboard';
 
   return (
@@ -28,13 +37,16 @@ export function Header() {
 
         <div className="flex items-center gap-6">
           {/* Desktop User Menu */}
-          <div className="hidden md:flex items-center gap-4">
+          <button
+            onClick={handleProfileClick}
+            className="hidden md:flex items-center gap-4 hover:opacity-80 transition-opacity cursor-pointer p-2 rounded-lg hover:bg-gray-100"
+          >
             <div className="text-right">
               <p className="text-sm font-semibold text-secondary">{user?.name}</p>
               <p className="text-xs text-gray-600">{user?.role}</p>
             </div>
             <Avatar src={user?.avatar} name={user?.name || 'User'} size="md" />
-          </div>
+          </button>
 
           {/* Mobile Menu Button */}
           <button
@@ -62,9 +74,16 @@ export function Header() {
             </div>
           </div>
           <div className="space-y-2">
+            <button
+              onClick={handleProfileClick}
+              className="w-full flex items-center gap-2 px-4 py-2 text-left text-secondary hover:bg-white rounded-lg transition-colors"
+            >
+              <User size={18} />
+              My Profile
+            </button>
             <button className="w-full flex items-center gap-2 px-4 py-2 text-left text-secondary hover:bg-white rounded-lg transition-colors">
               <Settings size={18} />
-              Profile Settings
+              Settings
             </button>
             <button
               onClick={handleLogout}

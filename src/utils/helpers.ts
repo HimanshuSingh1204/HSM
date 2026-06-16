@@ -104,5 +104,6 @@ export const menuItems = [
   { icon: 'Shield', label: 'Staff', path: '/staff' },
   { icon: 'FileStack', label: 'Documents', path: '/documents' },
   { icon: 'BarChart3', label: 'Reports', path: '/reports' },
+  { icon: 'User', label: 'Profile', path: '/profile' },
   { icon: 'Settings', label: 'Settings', path: '/settings' },
 ];

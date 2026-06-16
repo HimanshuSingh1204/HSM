@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Header } from '../components/common/Header';
-import { Sidebar } from '../components/common/Sidebar';
+import { RoleBasedSidebar } from '../components/common/RoleBasedSidebar';
 import { motion } from 'framer-motion';
 
 interface MainLayoutProps {
@@ -10,8 +10,8 @@ interface MainLayoutProps {
 export function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="flex h-screen bg-background">
-      <Sidebar />
-      <div className="flex-1 flex flex-col overflow-hidden">
+      <RoleBasedSidebar />
+      <div className="flex-1 flex flex-col overflow-hidden lg:ml-64">
         <Header />
         <motion.main
           initial={{ opacity: 0 }}

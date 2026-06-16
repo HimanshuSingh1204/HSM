@@ -3,7 +3,7 @@ export interface User {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'secretary' | 'resident' | 'security' | 'staff';
+  role: 'super-admin' | 'admin' | 'watchman' | 'member';
   societyId: string;
   avatar?: string;
   phone?: string;
@@ -12,7 +12,7 @@ export interface User {
 export interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
-  login: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string, role?: User['role']) => Promise<void>;
   logout: () => void;
 }
 
