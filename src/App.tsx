@@ -12,13 +12,11 @@ import { PollsPage } from './pages/PollsPage.tsx';
 import { FunctionsPage } from './pages/FunctionsPage.tsx';
 import { BillingPage } from './pages/BillingPage.tsx';
 import { FlatsPage } from './pages/FlatsPage.tsx';
-import {
-  VehiclesPage,
-  StaffPage,
-  DocumentsPage,
-  ReportsPage,
-  SettingsPage,
-} from './pages/PlaceholderPages.tsx';
+import { VehiclesPage } from './pages/PlaceholderPages.tsx';
+import { StaffPage } from './pages/StaffPage.tsx';
+import { DocumentsPage } from './pages/DocumentsPage.tsx';
+import { ReportsPage } from './pages/ReportsPage.tsx';
+import { SettingsPage } from './pages/SettingsPage.tsx';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { isAuthenticated } = useAuthStore();
