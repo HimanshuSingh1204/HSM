@@ -1,0 +1,43 @@
+{
+  "name": "hsms-housing-society-management",
+  "version": "1.0.0",
+  "description": "Housing Society Management System - Modern SaaS Platform",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "node server.js",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "framer-motion": "^10.16.0",
+    "lucide-react": "^0.292.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.48.0",
+    "react-router": "^6.20.0",
+    "react-router-dom": "^6.30.4",
+    "recharts": "^2.10.0",
+    "socket.io-client": "^4.7.0",
+    "tailwind-merge": "^2.2.0",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "postcss": "^8.4.31",
+    "socket.io": "^4.7.0",
+    "tailwindcss": "^3.3.0",
+    "terser": "^5.48.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  }
+}
