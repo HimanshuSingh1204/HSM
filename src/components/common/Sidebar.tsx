@@ -27,8 +27,8 @@ export function Sidebar() {
               H
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-secondary text-sm">HSMS</span>
-              <span className="text-xs text-gray-500">Housing Society</span>
+              <span className="font-bold text-secondary text-sm">Housing Society</span>
+              <span className="text-xs text-gray-500">Smart Housing Management</span>
             </div>
           </div>
         )}
@@ -75,8 +75,8 @@ export function Sidebar() {
       {/* Footer */}
       {!isCollapsed && (
         <div className="border-t border-gray-200 p-4 text-xs text-gray-500 text-center">
-          <p>© 2026 HSMS</p>
-          <p>Housing Society Management</p>
+          <p>© 2026 Housing Society</p>
+          <p>Smart Housing Management</p>
         </div>
       )}
     </motion.aside>
