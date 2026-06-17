@@ -110,9 +110,9 @@ export function RoleBasedSidebar() {
   const menuContent = (
     <>
       {/* Profile Section */}
-      <div className="p-4 border-b border-slate-200">
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-semibold">
+      <div className="p-3 border-b border-slate-200">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-9 h-9 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
             {user?.name.charAt(0).toUpperCase()}
           </div>
           <div className="flex-1 min-w-0">
@@ -182,13 +182,13 @@ export function RoleBasedSidebar() {
       )}
 
       {/* Sidebar - Desktop */}
-      <aside className="hidden lg:flex flex-col w-64 h-screen bg-white border-r border-slate-200 fixed left-0 top-0">
+      <aside className="hidden lg:flex flex-col w-56 h-screen bg-white border-r border-slate-200 fixed left-0 top-0">
         {menuContent}
       </aside>
 
       {/* Sidebar - Mobile */}
       <aside
-        className={`fixed inset-y-0 left-0 z-40 w-64 bg-white border-r border-slate-200 flex flex-col transition-transform lg:hidden ${
+        className={`fixed inset-y-0 left-0 z-40 w-72 max-w-[80%] bg-white border-r border-slate-200 flex flex-col transition-transform lg:hidden ${
           isMobileOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >

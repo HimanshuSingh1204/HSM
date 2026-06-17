@@ -12,10 +12,10 @@ export function AuthLayout({ children }: AuthLayoutProps) {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
-        className="w-full max-w-md"
+        className="w-full max-w-sm"
       >
         <div className="mb-8 text-center text-white">
-          <h1 className="text-3xl font-bold mb-1">Housing Society</h1>
+          <h1 className="text-2xl font-bold mb-1">Housing Society</h1>
           <p className="text-sm text-blue-100">Smart Housing Management</p>
         </div>
 
@@ -23,7 +23,7 @@ export function AuthLayout({ children }: AuthLayoutProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-white rounded-card shadow-2xl p-8"
+          className="bg-white rounded-card shadow-2xl p-6"
         >
           {children}
         </motion.div>

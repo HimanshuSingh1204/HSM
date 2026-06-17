@@ -30,16 +30,16 @@ export function Header() {
 
   return (
     <header className="bg-card-bg border-b border-gray-200 sticky top-0 z-40">
-      <div className="px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <h2 className="text-xl font-bold text-secondary">{currentPage}</h2>
+      <div className="px-4 py-3 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <h2 className="text-lg font-semibold text-secondary">{currentPage}</h2>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4">
           {/* Desktop User Menu */}
           <button
             onClick={handleProfileClick}
-            className="hidden md:flex items-center gap-4 hover:opacity-80 transition-opacity cursor-pointer p-2 rounded-lg hover:bg-gray-100"
+            className="hidden md:flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer px-3 py-2 rounded-lg hover:bg-gray-100"
           >
             <div className="text-right">
               <p className="text-sm font-semibold text-secondary">{user?.name}</p>

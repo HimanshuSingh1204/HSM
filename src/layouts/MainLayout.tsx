@@ -11,7 +11,7 @@ export function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="flex h-screen bg-background">
       <RoleBasedSidebar />
-      <div className="flex-1 flex flex-col overflow-hidden lg:ml-64">
+      <div className="flex-1 flex flex-col overflow-hidden lg:ml-56">
         <Header />
         <motion.main
           initial={{ opacity: 0 }}
@@ -19,7 +19,7 @@ export function MainLayout({ children }: MainLayoutProps) {
           transition={{ duration: 0.3 }}
           className="flex-1 overflow-y-auto"
         >
-          <div className="max-w-7xl mx-auto p-6">{children}</div>
+          <div className="max-w-5xl mx-auto px-4 py-4 md:px-5 md:py-5">{children}</div>
         </motion.main>
       </div>
     </div>
